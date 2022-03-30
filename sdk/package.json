@@ -1,0 +1,22 @@
+{
+  "name": "211150-211064-186499-sdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asp-2021-n8b/211150-211064-186499-sdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asp-2021-n8b/211150-211064-186499-sdk/issues"
+  },
+  "homepage": "https://github.com/asp-2021-n8b/211150-211064-186499-sdk#readme",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}

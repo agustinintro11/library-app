@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:title="@string/library">
+            <menu>
+                <group
+                    android:id="@+id/library"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/catalog_fragment"
+                        android:icon="@drawable/icons8_books"
+                        android:title="@string/catalog" />
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="@string/administrator">
+            <menu>
+                <group
+                    android:id="@+id/admin"
+                    android:checkableBehavior="single">
+                    <!--TODO change id when preferences fragment is implemented-->
+                    <item
+                        android:id="@+id/inviteUser_fragment"
+                        android:icon="@drawable/icons8_invite"
+                        android:title="@string/invite_user" />
+                    <item
+                        android:id="@+id/apikeyManagement_fragment"
+                        android:icon="@drawable/icons8_rest_api"
+                        android:title="@string/apikey_management" />
+                    <item
+                        android:id="@+id/manageBooks_fragment"
+                        android:icon="@drawable/icons8_course_assign"
+                        android:title="@string/book_management" />
+                    <item
+                        android:id="@+id/returnBook_fragment"
+                        android:icon="@drawable/icons8_return_book"
+                        android:title="@string/return_book" />
+                </group>
+            </menu>
+        </item>
+
+    </group>
+</menu>

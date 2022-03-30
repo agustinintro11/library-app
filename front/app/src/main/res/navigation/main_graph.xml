@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splash_fragment">
+
+    <fragment
+        android:id="@+id/catalog_fragment"
+        android:name="com.example.libraryapp.ui.screens.catalog.CatalogFragment"
+        android:label="@string/title_catalog"
+        tools:layout="@layout/fragment_catalog">
+        <action
+            android:id="@+id/action_catalog_fragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reservations_fragment"
+        android:name="com.example.libraryapp.ui.screens.reservations.ReservationsFragment"
+        android:label="@string/title_reservations"
+        tools:layout="@layout/fragment_reservations">
+        <action
+            android:id="@+id/action_reservations_fragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboard_fragment"
+        android:name="com.example.libraryapp.ui.screens.dashboard.DashboardFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboard_fragment_to_splash_fragment"
+            app:destination="@id/splash_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splash_fragment"
+        android:name="com.example.libraryapp.ui.screens.auth.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_login_fragment"
+            app:destination="@id/loginFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_splash_fragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_splash_fragment_to_catalog_fragment"
+            app:destination="@id/catalog_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.libraryapp.ui.screens.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_catalog_fragment"
+            app:destination="@id/catalog_fragment" />
+        <argument
+            android:name="orgName"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="email"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.libraryapp.ui.screens.auth.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splash_fragment" />
+        <argument
+            android:name="orgName"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="email"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="invitationId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/signup_deeplink"
+            app:uri="libraryapp.com/signup/{invitationId}?orgName={orgName}&amp;email={email}" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="com.example.libraryapp.ui.screens.book.BookFragment"
+        android:label="fragment_book"
+        tools:layout="@layout/fragment_book">
+        <argument
+            android:name="book"
+            app:argType="com.example.libraryapp.data.model.Book" />
+    </fragment>
+    <fragment
+        android:id="@+id/apikeyManagement_fragment"
+        android:name="com.example.libraryapp.ui.screens.apikeyManagement.ApikeyManagement"
+        android:label="@string/apikey_management"
+        tools:layout="@layout/fragment_apikey_management" />
+    <fragment
+        android:id="@+id/inviteUser_fragment"
+        android:name="com.example.libraryapp.ui.screens.inviteUser.InviteUserFragment"
+        android:label="@string/invite_user"
+        tools:layout="@layout/fragment_invite_user" />
+    <fragment
+        android:id="@+id/manageBooks_fragment"
+        android:name="com.example.libraryapp.ui.screens.manageBooks.ManageBooksFragment"
+        android:label="@string/book_management"
+        tools:layout="@layout/fragment_manage_books">
+        <action
+            android:id="@+id/action_manageBooks_fragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+        <action
+            android:id="@+id/action_manageBooks_fragment_to_editBookFragment"
+            app:destination="@id/editBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.example.libraryapp.ui.screens.manageBooks.addBook.AddBookFragment"
+        android:label="@string/add_book"
+        tools:layout="@layout/fragment_add_book" />
+    <fragment
+        android:id="@+id/editBookFragment"
+        android:name="com.example.libraryapp.ui.screens.manageBooks.editBook.EditBookFragment"
+        android:label="@string/edit_book"
+        tools:layout="@layout/fragment_edit_book">
+        <argument
+            android:name="book"
+            app:argType="com.example.libraryapp.data.model.Book" />
+    </fragment>
+    <fragment
+        android:id="@+id/returnBook_fragment"
+        android:name="com.example.libraryapp.ui.screens.returnBook.ReturnBookFragment"
+        android:label="@string/return_book"
+        tools:layout="@layout/fragment_return_book" >
+        <action
+            android:id="@+id/action_returnBook_fragment_to_bookReservationsFragment"
+            app:destination="@id/bookReservationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookReservationsFragment"
+        android:name="com.example.libraryapp.ui.screens.returnBook.bookReservations.BookReservationsFragment"
+        android:label="Reservas del libro"
+        tools:layout="@layout/fragment_book_reservations">
+        <argument
+        android:name="book"
+        app:argType="com.example.libraryapp.data.model.Book" />
+    </fragment>
+</navigation>

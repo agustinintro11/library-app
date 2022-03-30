@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_50">#f1f8ea</color>
+    <color name="green_100">#dcedca</color>
+    <color name="green_200">#c4e2a6</color>
+    <color name="green_300">#acd682</color>
+    <color name="green_400">#9bcd68</color>
+    <color name="green_500">#89c44d</color>
+    <color name="green_600">#81be46</color>
+    <color name="green_700">#76b63d</color>
+    <color name="green_800">#6caf34</color>
+    <color name="green_900">#59a225</color>
+    <color name="green_A100">#ecffe0</color>
+    <color name="green_A200">#cdffad</color>
+    <color name="green_A400">#aeff7a</color>
+    <color name="green_A700">#9fff60</color>
+
+    <color name="purple_50">#f1eaf8</color>
+    <color name="purple_100">#dccaed</color>
+    <color name="purple_200">#c4a6e2</color>
+    <color name="purple_300">#ac82d6</color>
+    <color name="purple_400">#9b68cd</color>
+    <color name="purple_500">#894dc4</color>
+    <color name="purple_600">#8146be</color>
+    <color name="purple_700">#763db6</color>
+    <color name="purple_800">#6c34af</color>
+    <color name="purple_900">#5925a2</color>
+    <color name="purple_A100">#ece0ff</color>
+    <color name="purple_A200">#cdadff</color>
+    <color name="purple_A400">#ae7aff</color>
+    <color name="purple_A700">#9f60ff</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="red_active">#B71C1C</color>
+    <color name="purple_active">#9c27b0</color>
+    <color name="blue_active">#03a9f4</color>
+    <color name="green_active">#4caf50</color>
+    <color name="blue_grey_active">#607d8b</color>
+    <color name="yellow_active">#ffeb3b</color>
+    <color name="orange_active">#ff9800</color>
+    <color name="grey_active">#9e9e9e</color>
+
+    <color name="red_inactive">#EF9A9A</color>
+    <color name="purple_inactive">#ba68c8</color>
+    <color name="blue_inactive">#64b5f6</color>
+    <color name="green_inactive">#81c784</color>
+    <color name="green_on_inactive">#1B5E20</color>
+    <color name="blue_grey_inactive">#90a4ae</color>
+    <color name="yellow_inactive">#fff176</color>
+    <color name="orange_inactive">#ffb74d</color>
+    <color name="gery_inactive">#e0e0e0</color>
+
+
+    <color name="book_blue_light">#2196F3</color>
+    <color name="book_blue">#1A237E</color>
+    <color name="book_brown_light">#CA461C</color>
+    <color name="book_brown">#702008</color>
+    <color name="book_green_light">#009688</color>
+    <color name="book_green">#004D40</color>
+    <color name="book_light_green_light">#8BC34A</color>
+    <color name="book_light_green">#33691E</color>
+    <color name="book_orange_light">#FF9800</color>
+    <color name="book_orange">#E65100</color>
+    <color name="book_pink_light">#E91E63</color>
+    <color name="book_pink">#880E4F</color>
+    <color name="book_purple_light">#7B1FA2</color>
+    <color name="book_purple">#4A148C</color>
+    <color name="book_red_light">#EF5350</color>
+    <color name="book_red">#B71C1C</color>
+    <color name="book_skyblue_light">#00BCD4</color>
+    <color name="book_skyblue">#01579B</color>
+    <color name="book_yellow_light">#FFC107</color>
+    <color name="book_yellow">#FF6F00</color>
+
+
+</resources>

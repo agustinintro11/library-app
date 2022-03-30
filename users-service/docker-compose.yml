@@ -1,0 +1,35 @@
+version: "3"
+services:
+  users-app:
+    build:
+      context: .
+      args:
+        - env=DEV
+    depends_on:
+      - postgres
+    ports:
+      - "3002:3002"
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - postgres-app
+      - microservices-network
+
+  postgres:
+    image: postgres:11.2-alpine
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: users
+    networks:
+      - postgres-app
+    ports:
+      - "1003:5432"
+
+networks:
+  postgres-app:
+    driver: bridge
+  microservices-network:
+    external:
+      name: 211150-211064-186499-back_microservices-network
+

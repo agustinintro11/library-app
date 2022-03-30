@@ -1,0 +1,17 @@
+services:
+  emails-app:
+    build:
+      context: .
+      args:
+        - env=DEV
+    ports:
+      - "3001:3001"
+    networks:
+      - microservices-network
+    volumes:
+      - .:/usr/src/app
+
+networks:
+  microservices-network:
+    external:
+      name: 211150-211064-186499-back_microservices-network

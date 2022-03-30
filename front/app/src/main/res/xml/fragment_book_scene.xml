@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo">
+
+    <Transition
+        android:id="@+id/transition_start_end"
+        motion:constraintSetEnd="@+id/end_motion_layout"
+        motion:constraintSetStart="@id/start_motion_layout"
+        motion:duration="1000"
+        motion:motionInterpolator="bounce"
+        motion:pathMotionArc="flip">
+        <OnSwipe motion:touchAnchorId="@+id/book_info_layout"  motion:dragDirection="dragUp"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start_motion_layout">
+        <Constraint
+            android:id="@+id/tv_swipe_to_reviews"
+            android:elevation="8dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/book_info_layout"
+            android:layout_marginBottom="32dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/swipe_rv_reviews"
+            android:elevation="7dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toBottomOf="@+id/tv_reviews"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/tv_not_found_reviews"
+            android:elevation="5dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            app:visibilityMode="ignore"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            motion:layout_constraintTop_toTopOf="@+id/swipe_rv_reviews"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:visibilityMode="ignore" />
+        <Constraint
+            android:id="@+id/swipeUp_animation"
+            android:elevation="7dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            motion:layout_constraintBottom_toTopOf="@+id/tv_swipe_to_reviews"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="visible" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end_motion_layout">
+
+        <Constraint
+            android:id="@+id/book_background"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="-10dp" />
+        <Constraint
+            android:id="@+id/book_background_overlay"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="@+id/book_background" />
+        <Constraint
+            android:id="@+id/book_background_overlay"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="@+id/book_background"
+            android:layout_marginTop="0dp" />
+        <Constraint
+            android:id="@+id/book_cover_background"
+            android:elevation="0dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="180dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toBottomOf="@+id/book_toolbar"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="@+id/table_details"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/book_background"
+            android:id="@+id/fabwrap"
+            motion:layout_constraintBottom_toBottomOf="@+id/tv_book_authors"
+            android:layout_marginEnd="24dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            motion:layout_constraintTop_toTopOf="@id/book_info_layout"
+            android:layout_width="0dp"
+            motion:layout_constraintEnd_toStartOf="@+id/fabwrap"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:id="@+id/tv_book_title"
+            android:layout_marginEnd="16dp" />
+        <Constraint
+            android:id="@+id/tv_reviews"
+            android:elevation="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@+id/table_details"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            motion:transitionEasing="accelerate" />
+        <Constraint
+            android:id="@+id/tv_swipe_to_reviews"
+            android:elevation="8dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/book_info_layout"
+            android:layout_marginBottom="32dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/swipe_rv_reviews"
+            android:elevation="7dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@+id/tv_reviews"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/tv_not_found_reviews"
+            android:elevation="5dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            app:visibilityMode="ignore"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            motion:layout_constraintTop_toTopOf="@+id/swipe_rv_reviews"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/reviews_layout"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@+id/table_details"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="-20dp" />
+        <Constraint
+            android:id="@+id/swipeUp_animation"
+            android:elevation="7dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            motion:layout_constraintBottom_toTopOf="@+id/tv_swipe_to_reviews"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+
+    </ConstraintSet>
+</MotionScene>

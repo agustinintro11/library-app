@@ -1,0 +1,35 @@
+version: "3"
+services:
+  reviews-app:
+    build:
+      context: .
+      args:
+        - env=DEV
+    depends_on:
+      - postgres
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - postgres-app
+      - microservices-network
+
+  postgres:
+    image: postgres:11.2-alpine
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: reviews
+    networks:
+      - postgres-app
+    ports:
+      - "1001:5432"
+
+networks:
+  postgres-app:
+    driver: bridge
+  microservices-network:
+    external:
+      name: 211150-211064-186499-back_microservices-network
+

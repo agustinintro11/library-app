@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/book_back_cover"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/gradient_purple"
+            android:elevation="2dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/book_black_overlay2"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/black_overlay"
+            android:elevation="3dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/book_black_overlay"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/black_overlay"
+            android:elevation="4dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/book_cover_view"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:background="@drawable/gradient_purple"
+            android:elevation="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:elevation="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:maxLines="4"
+            android:text="Don Quijote de la Macha "
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:typeface="normal"
+            app:layout_constraintEnd_toEndOf="@id/book_cover_view"
+            app:layout_constraintStart_toStartOf="@id/book_cover_view"
+            app:layout_constraintTop_toTopOf="@id/book_cover_view" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_reservation_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/black_overlay"
+            android:elevation="7dp"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:shadowColor="#00FFFFFF"
+            android:text="3 días"
+            android:textAppearance="@style/ChipTextAppearance"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            app:chipEndPadding="0dp"
+            app:chipIcon="@drawable/icons8_deadline"
+            app:chipIconSize="12sp"
+            app:chipIconTint="#FFFFFF"
+            app:chipSurfaceColor="#7CFFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/book_cover_view"
+            app:layout_constraintEnd_toEndOf="@+id/book_cover_view"
+            app:layout_constraintStart_toStartOf="@+id/book_cover_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

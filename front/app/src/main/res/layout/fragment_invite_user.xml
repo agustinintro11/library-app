@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".ui.screens.inviteUser.InviteUserFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_email_invite"
+        style="@style/Widget.App.TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/email_invite_user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ti_email_invite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:theme="@style/Widget.App.Chip"
+        app:checkedChip="@id/chip_admin"
+        app:layout_constraintStart_toEndOf="@+id/type"
+        app:layout_constraintTop_toBottomOf="@+id/tf_email_invite"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_admin"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Administrador"
+            app:chipIcon="@drawable/icons8_maintenance"
+            app:chipIconEnabled="true"
+            app:chipIconSize="15dp"
+            app:chipIconTint="@color/mtrl_choice_chip_text_color"
+            app:iconEndPadding="3dp"
+            app:iconStartPadding="3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_student"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alumno"
+            app:chipIcon="@drawable/icons8_graduation_cap"
+            app:chipIconEnabled="true"
+            app:chipIconSize="15dp"
+            app:chipIconTint="@color/mtrl_choice_chip_text_color"
+            app:iconEndPadding="3dp"
+            app:iconStartPadding="3dp" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <Button
+        android:id="@+id/btn_send_invitation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="18dp"
+        android:text="@string/send_invitation"
+        app:layout_constraintEnd_toEndOf="@+id/tf_email_invite"
+        app:layout_constraintStart_toStartOf="@+id/tf_email_invite"
+        app:layout_constraintTop_toBottomOf="@+id/chip_group"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/iv_invite_user_draw"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/bookstore"
+        android:padding="24dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mail"
+        app:layout_constraintBottom_toTopOf="@+id/tf_email_invite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/type"
+        style="@style/WelcomeSmallTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Tipo"
+        app:layout_constraintBottom_toBottomOf="@+id/chip_group"
+        app:layout_constraintStart_toStartOf="@+id/tf_email_invite"
+        app:layout_constraintTop_toTopOf="@+id/chip_group" />
+</androidx.constraintlayout.widget.ConstraintLayout>

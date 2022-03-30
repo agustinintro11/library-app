@@ -1,0 +1,13 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "juanbalian/api-gateway-service:0.0.1",
+      "Update": "true"
+    },
+    "Ports": [
+      {
+        "HostPort": 3000,
+        "ContainerPort": 3000
+      }
+    ]
+  }

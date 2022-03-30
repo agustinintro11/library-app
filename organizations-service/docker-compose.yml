@@ -1,0 +1,34 @@
+version: "3"
+services:
+  organizations-app:
+    build:
+      context: .
+      args:
+        - env=DEV
+    depends_on:
+      - postgres
+    ports:
+      - "3003:3003"
+    networks:
+      - microservices-network
+      - db
+    volumes:
+      - .:/usr/src/app
+
+  postgres:
+    image: postgres:11.2-alpine
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: organizations
+    networks:
+      - db
+    ports:
+      - "1002:5432"
+
+networks:
+  microservices-network:
+    external:
+      name: 211150-211064-186499-back_microservices-network
+  db:
+    name: db

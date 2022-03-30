@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:title="Biblioteca">
+            <menu>
+                <group
+                    android:id="@+id/library"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/catalog_fragment"
+                        android:icon="@drawable/icons8_books"
+                        android:title="Catálogo" />
+                    <item
+                        android:id="@+id/reservations_fragment"
+                        android:icon="@drawable/icons8_book_shelf"
+                        android:title="Mis reservas" />
+                </group>
+            </menu>
+        </item>
+        <!--TODO change id when reviews fragment is implemented-->
+        <item
+            android:id="@+id/reviews_fragment"
+            android:icon="@drawable/icons8_features_list"
+            android:title="Reseñas recientes" />
+
+        <item android:title="Preferencias">
+            <menu>
+                <group
+                    android:id="@+id/preferences"
+                    android:checkableBehavior="single">
+                    <!--TODO change id when preferences fragment is implemented-->
+                    <item
+                        android:id="@+id/preferen"
+                        android:icon="@drawable/icons8_settings"
+                        android:title="Preferencias" />
+                </group>
+            </menu>
+        </item>
+
+    </group>
+</menu>

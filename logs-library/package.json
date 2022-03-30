@@ -1,0 +1,19 @@
+{
+  "name": "logger-ort",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "dependencies": {
+    "logger-ort": "^1.0.1",
+    "winston": "^3.3.3"
+  }
+}

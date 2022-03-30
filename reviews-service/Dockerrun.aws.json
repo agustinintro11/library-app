@@ -1,0 +1,13 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "juanbalian/reviews-service:0.0.3",
+      "Update": "true"
+    },
+    "Ports": [
+      {
+        "HostPort": 5000,
+        "ContainerPort": 5000
+      }
+    ]
+  }

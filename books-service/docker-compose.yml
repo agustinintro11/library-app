@@ -1,0 +1,33 @@
+version: "3"
+services:
+  books-app:
+    build:
+      context: .
+      args:
+        - env=DEV
+    depends_on:
+      - postgres
+    ports:
+      - "3004:3004"
+    networks:
+      - db
+      - microservices-network
+
+  postgres:
+    image: postgres:11.2-alpine
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: books
+    networks:
+      - db
+    ports:
+      - "1005:5432"
+
+networks:
+  db:
+    driver: bridge
+  microservices-network:
+    external:
+      name: 211150-211064-186499-back_microservices-network
+

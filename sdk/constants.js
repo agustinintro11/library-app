@@ -1,0 +1,26 @@
+const API_GATEWAY_URL = 'http://localhost:3000';
+
+const BASE_RESERVATIONS_SERVICE_URL = `${API_GATEWAY_URL}/reservations_service`;
+const RESERVATIONS_BASE = '/reservations';
+const RANGE_QUERY_SUFFIX = '/rangeQuery';
+
+const BASE_USERS_SERVICE_URL = `${API_GATEWAY_URL}/users_service`;
+const SESSIONS_BASE = '/sessions';
+
+const BASE_ORGANIZATIONS_SERVICE_URL = `${API_GATEWAY_URL}/organizations_service`;
+const ORGANIZATIONS_BASE = '/organizations';
+const API_KEY_BY_NAME_SUFFIX = '/apiKey';
+
+const TIMEOUT = 500;
+
+module.exports = {
+  BASE_RESERVATIONS_SERVICE_URL,
+  RESERVATIONS_BASE,
+  RANGE_QUERY_SUFFIX,
+  BASE_USERS_SERVICE_URL,
+  SESSIONS_BASE,
+  BASE_ORGANIZATIONS_SERVICE_URL,
+  ORGANIZATIONS_BASE,
+  API_KEY_BY_NAME_SUFFIX,
+  TIMEOUT,
+};

@@ -1,0 +1,36 @@
+version: "3"
+services:
+  reservations-app:
+    build:
+      context: .
+      args:
+        - env=DEV
+    depends_on:
+      - postgres
+    ports:
+      - "3005:3005"
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - postgres-app
+      - microservices-network
+
+  postgres:
+    image: postgres:11.2-alpine
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: reservations
+    networks:
+      - postgres-app
+    ports:
+      - "1006:5432"
+
+
+networks:
+  postgres-app:
+    driver: bridge
+  microservices-network:
+    external:
+      name: 211150-211064-186499-back_microservices-network
+

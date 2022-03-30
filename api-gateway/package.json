@@ -1,0 +1,31 @@
+{
+  "name": "211150-211064-186499-back",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "sh ./start.sh",
+    "test": "jest --passWithNoTests"
+  },
+  "dependencies": {
+    "@newrelic/winston-enricher": "^2.0.0",
+    "axios": "^0.24.0",
+    "config": "^3.3.6",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "express-jwt": "^6.1.0",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "logger-ort": "1.0.2",
+    "newrelic": "^8.4.0"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^2.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^27.2.4"
+  }
+}

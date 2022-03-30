@@ -1,0 +1,15 @@
+services:
+  node-app:
+    build:
+      context: .
+      args:
+        - env=DEV
+    ports:
+      - "3000:3000"
+    networks:
+      - microservices-network
+    volumes:
+      - .:/usr/src/app
+networks:
+  microservices-network:
+    driver: bridge

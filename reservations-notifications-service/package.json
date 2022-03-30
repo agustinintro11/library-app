@@ -1,0 +1,27 @@
+{
+  "name": "211150-211064-186499-reservations-notifications-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "sh ./start.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asp-2021-n8b/211150-211064-186499-reservations-notifications-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asp-2021-n8b/211150-211064-186499-reservations-notifications-service/issues"
+  },
+  "homepage": "https://github.com/asp-2021-n8b/211150-211064-186499-reservations-notifications-service#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "logger-ort": "^1.0.2",
+    "newrelic": "^8.6.0"
+  }
+}

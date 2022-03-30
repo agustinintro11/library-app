@@ -1,0 +1,38 @@
+{
+  "name": "211150-211064-186499-books-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "sh ./start.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asp-2021-n8b/211150-211064-186499-books-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asp-2021-n8b/211150-211064-186499-books-service/issues"
+  },
+  "homepage": "https://github.com/asp-2021-n8b/211150-211064-186499-books-service#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "celebrate": "^15.0.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.3.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "isbn-validate": "^1.0.3",
+    "logger-ort": "^1.0.2",
+    "newrelic": "^8.6.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.12.0-alpha.1"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.14.0",
+    "sequelize-cli": "^6.3.0"
+  }
+}
